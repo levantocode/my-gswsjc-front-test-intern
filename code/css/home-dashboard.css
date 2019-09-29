@@ -1,11 +1,10 @@
+body {
+    background-color: whitesmoke;
+}
 
 #logo-menu {
     height: 100%;
     width: 75px;
-}
-
-.item {
-    margin-left: 50px;
 }
 
 .menu-text {
@@ -15,4 +14,23 @@
 #fullscreen-icon {
     margin-right: 20px;
     margin-left: 5px;
+}
+
+#perfil-text {
+    font-weight: bold;
+    color: chocolate;
+}
+
+#middle-page {
+    max-height: 84vh;
+    margin: 0% 5%;
+
+    overflow: auto;
+    scrollbar-width: thin;
+
+    background-color: whitesmoke;
+}
+
+.grey-text {
+    color: grey;
 }
