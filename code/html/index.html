@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Projeto Fácil</title>
+
+    <!-- Semantic UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+
+<body>
+    <div class='login-background-image'>
+        <div class="ui container">
+            <!-- <img src="../../resources/images/background-main3.png"/> -->
+
+            <div class='ui raised segment' id='login-segment'>
+
+                <form class='ui large form'>
+                    <img class='ui small image' src='../../resources/images/p-logo.png' style='margin: auto;'>
+                    <p id='form-header'>Acesse sua conta</p>
+
+                    <div class='field'>
+                        <input type='text' name='username' placeholder='Digite seu login'>
+                    </div>
+        
+                    <div class='field'>
+                        <input type='text' name='password' placeholder='Digite sua senha'>
+                    </div>
+        
+                    <div class='inline fields'>
+                        <div class='field'>
+                            <div class='ui checkbox'>
+                                <input type='checkbox'>
+                                <label style='color:grey;'>Manter conectado</label>
+                            </div>
+                        </div>
+        
+                        <div class='field' id='esqueceu-senha'>
+                            <a id='link-esqueceu-senha' href='https://www.google.com'>Esqueceu a senha?</a>
+                        </div>
+                    </div>
+
+                    <div class='ui submit blue button' id='btn-acessar-conta'>
+                        <a href='home-dashboard.html' id='txt-acessar-conta'>Acessar Conta</a>
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Semantic UI Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</body>
+</html>
