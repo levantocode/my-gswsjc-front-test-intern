@@ -22,8 +22,8 @@ body {
 }
 
 #middle-page {
-    max-height: 84vh;
-    margin: 0% 5%;
+    height: 84vh;
+    margin: 0% 3%;
 
     overflow: auto;
     scrollbar-width: thin;
@@ -33,4 +33,14 @@ body {
 
 .grey-text {
     color: grey;
+}
+
+.footer-i {
+    width: 150px;
+    text-align: center;
+}
+
+.footer-text {
+    color: grey;
+    margin: auto;
 }

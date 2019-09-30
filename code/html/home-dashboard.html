@@ -281,47 +281,64 @@
 
 
 
-            <div class="pusher">
-                <div class="container" id='middle-page'>
-                    <div class="ui breadcrumb">
-                        <div class="section grey-text">Home</div>
-                        <div class="divider"> / </div>
-                        <div class="section grey-text">Dashboard</div>
+        <div class="pusher">
+            <div class="container" id='middle-page'>
+                <div class="ui breadcrumb" style='margin: 3% 0;'>
+                    <div class="section grey-text">Home</div>
+                    <div class="divider"> / </div>
+                    <div class="section grey-text">Dashboard</div>
+                </div>
 
-                    </div>
 
-                    <div class="item">
-                        <div class="content">
-                            <div class="header grey-text">
-                                <p>Olá <span>José Severino</span>, bem vindo!</p>
-                            </div>
-                            <div class="description grey-text">
-                                <p style='margin-top:1000px;'>Veja o andamento dos projetos</p>
-                            </div>
+                <div class="item">
+                    <div class="content">
+                        <div class="header">
+                            <p style='font-size: 20px;'>Olá <span style='color:cornflowerblue'>José Severino</span>, bem vindo!</p>
+                        </div>
+                        <div class="description grey-text">
+                            <p style='font-size: 15px;'>Veja o andamento dos projetos</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="footer">
-                    <div class="item">Footer</div>
+
+            <div class='ui bottom fixed borderless menu' style='height: 8%;'>
+                <div class='item' style='margin-left: 2.15%;'>
+                    <p class='grey-text'>2019 Desenvolvido com muito<i class="coffee icon" style='margin-left: 10px;'></i></p>
                 </div>
 
+                <div class='right menu' style='margin-right: 271px;'>
+                    <a class="item footer-i">
+                        <p class='footer-text'>Dashboard</p>
+                    </a>
+
+                    <a class="item footer-i">
+                        <p class='footer-text'>Alterar plano</p>
+                    </a>
+
+                    <a class="item footer-i">
+                        <p class='footer-text'>Ajuda & Suporte</p>
+                    </a>
+                </div>
             </div>
+
         </div>
+    </div>
 
 
 
 
 
-        <script>
-            $('.ui.accordion').accordion();
+    <script>
+        $('.ui.accordion').accordion();
 
-            $('.ui.sidebar').sidebar({
-                context: $('.bottom.container')
-            }).sidebar('attach events', '.menu .openbtn')
-                .sidebar('setting', 'dimPage', false)
-                ;
-        </script>
+        $('.ui.sidebar').sidebar({
+            context: $('.bottom.container')
+        }).sidebar('attach events', '.menu .openbtn')
+            .sidebar('setting', 'dimPage', false)
+            ;
+    </script>
 
 </body>
 
