@@ -23,7 +23,8 @@ body {
 
 #middle-page {
     height: 84vh;
-    margin: 0% 3%;
+    margin-left: 3%;
+    margin-right: 17%;
 
     overflow: auto;
     scrollbar-width: thin;
@@ -43,4 +44,50 @@ body {
 .footer-text {
     color: grey;
     margin: auto;
+}
+
+#project-list-search-grid {
+    /* border: 2px solid black; width: 100%; */
+    height: 57px;
+}
+
+#title-listagem-text {
+    margin-bottom: 2%;
+    font-size: 21px;
+}
+
+.usr-name {
+    color: black;
+    font-size: 15px;
+}
+
+.usr-name:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.project-details > * {
+    display:inline-block;
+    vertical-align: top;
+    max-width:70%;
+
+    /* border: 2px solid black; */
+}
+
+.time-content {
+    float: right;
+    width: 15%;
+    margin: 0% 7%;
+}
+
+#time-left {
+    margin-left: 7%;
+    margin-right: 12%;
+    /* border: 2px solid black; */
+}
+
+#time-right {
+    margin-left: 12%;
+    color: tomato;
+    /* border: 2px solid black; */
 }
