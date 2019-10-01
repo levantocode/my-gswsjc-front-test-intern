@@ -9,8 +9,8 @@
     <title>Home/Dashboard</title>
 
     <!-- Semantic UI-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/home-dashboard.css">
@@ -38,7 +38,7 @@
             </div>
         </div>
 
-        <a class="item" style="margin-left: 75px;">
+        <a class="item" id="criar-projeto">
             <i class="plus icon"></i>
             <p class="menu-text">Criar Projeto</p>
         </a>
@@ -87,20 +87,16 @@
                         </div>
 
                     </a>
-
                     <div class="content">
                         <p>Online</p>
                     </div>
                 </div>
 
-
                 <div class="ui divider"></div>
-
 
                 <a class="active item">
                     <p> <i class="home icon"></i> Dashboard</p>
                 </a>
-
 
                 <div class="item">
                     <div class="ui accordion">
@@ -117,7 +113,6 @@
                     </div>
                 </div>
 
-
                 <div class="item">
                     <div class="ui accordion">
                         <a class="title item">
@@ -127,13 +122,12 @@
                         </a>
 
                         <div class="content">
-                            <a class="item">Criar projeto</a>
+                            <a class="item" id="cliente-criar-projeto">Criar projeto</a>
                             <a class="item">Relatórios</a>
                             <a class="item">Registros</a>
                         </div>
                     </div>
                 </div>
-
 
                 <div class="item">
                     <div class="ui accordion">
@@ -150,11 +144,9 @@
                     </div>
                 </div>
 
-
                 <a class="item">
                     <p> <i class="clock icon"></i> Ver registro de horas</p>
                 </a>
-
 
                 <div class="item">
                     <div class="ui accordion">
@@ -170,14 +162,11 @@
                     </div>
                 </div>
 
-
                 <a class="item">
                     <p> <i class="sign out icon"></i> Sair do sistema</p>
                 </a>
             </div>
         </div>
-
-
 
 
 
@@ -188,7 +177,6 @@
                     <div class="divider"> / </div>
                     <div class="section grey-text">Dashboard</div>
                 </div>
-
 
                 <div class="item" style="margin-top: 3%; margin-bottom: 2%;">
                     <div class="content">
@@ -219,7 +207,6 @@
                             </div>
                         </div>
 
-
                         <div class="two wide right floated column" style="margin-left:20%;">
                             <div class="item" style="text-align: right;">
                                 <p class="grey-text">Horas lançadas</p>
@@ -233,7 +220,6 @@
                         </div>
                     </div>
 
-
                     <div class="ui list list-projects">
                         <div class="ui segment">
                             <div class="item project-details">
@@ -241,7 +227,7 @@
                                     <img src="../../resources/images/a-letter.png">
                                 </a>
 
-                                <div class="content project-user-info" style="margin-left: 0.5%;">
+                                <div class="vertical content project-user-info" style="margin-left: 0.5%;">
                                     <div class="summary">
                                         <a class="user usr-name">Tanby Papelaria </a>
                                         <i class="caret right icon"></i> Desenvolvimento
@@ -260,7 +246,7 @@
                                     <i class="ellipsis horizontal icon"></i>
 
                                     <div class="menu">
-                                        <div class="item">Ver detalhes</div>
+                                        <div class="item" id="ver-detalhes">Ver detalhes</div>
                                     </div>
                                 </div>
 
@@ -277,7 +263,6 @@
                                 <div class="bar"></div>
                             </div>
                         </div>
-
 
                         <div class="ui segment">
                             <div class="item project-details">
@@ -321,7 +306,6 @@
                                 <div class="bar"></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -348,27 +332,130 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
 
 
 
+    <div class="ui tiny modal" id="modal-criar-projeto">
+        <p style="font-size: 20px;">Criar projeto <i class="close icon" id="close-modal-icon"></i></p>
+
+        <form class="ui form">
+            <div class="field">
+                <input type="text" name="project-name" placeholder="Nome do projeto">
+            </div>
+
+            <div class="field">
+                <div class="ui selection dropdown">
+                    <span class="text grey-text">Selecione o cliente</span>
+
+                    <div class="menu">
+                        <div class="ui icon search input">
+                            <i class="search icon"></i>
+                            <input type="text" placeholder="Encontrar cliente">
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="scrolling menu">
+                            <div class="item">Caio</div>
+                            <div class="item">João</div>
+                            <div class="item">Maria</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inline fields">
+                <label>Projeto privado
+                    <div data-tooltip="Projeto público?" id="icon-tooltip">
+                        <i class="info circle icon" id="lbl-radiobtn-criar-projeto"></i>
+                    </div>
+                </label>
+
+                <div class="field">
+                    <div class="ui radio checkbox" style="margin-right: 15px;">
+                        <input type="radio" name="project-privacy">
+                        <label style="color:grey;">Sim</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" name="project-privacy" checked="checked">
+                        <label style="color:grey;">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item" id="accordion-criar-projeto">
+                <div class="ui active accordion">
+                    <a class="title item">
+                        <span style="font-weight: bold;">Adicionar usuários
+                            <i class="dropdown icon" style="float: right;"></i>
+                        </span>
+                    </a>
+
+                    <div class="active content" style="margin: 1% 0%;">
+                        <div class="ui list">
+                            <div class="item">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="client-name">
+                                    <label>Jonas</label>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="client-name">
+                                    <label>Gabriela</label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="client-name">
+                                    <label>Maria</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui fluid large submit teal button" id="btn-criar-projeto">
+                <a id="txt-criar-projeto">Criar projeto</a>
+            </div>
+        </form>
+    </div>
+
 
 
     <script>
         $(".ui.accordion").accordion();
+        $(".ui.checkbox").checkbox();
+        $(".ui.dropdown").dropdown();
+        $("#project").progress();
+
+        $("#cliente-criar-projeto").on("click", () => {
+            $(".tiny.modal").modal("show")
+        });
+
+        $("#close-modal-icon").on("click", () => {
+            $(".tiny.modal").modal("hide")
+        });
+
+        $("#btn-criar-projeto").on("click", () => {
+            $(".tiny.modal").modal("hide")
+        });
 
         $(".ui.sidebar").sidebar({
             context: $(".bottom.container")
         }).sidebar("attach events", ".menu .openbtn")
             .sidebar("setting", "dimPage", false);
 
-        $(".ui.dropdown").dropdown();
-
-        $("#project").progress();
+        $("#ver-detalhes").on("click", () => {
+            console.log("foi")
+        });     
     </script>
-
 </body>
-
 </html>

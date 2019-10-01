@@ -2,13 +2,53 @@ body {
     background-color: whitesmoke;
 }
 
+.menu-text {
+    font-size: 13px;
+}
+
+.grey-text {
+    color: grey;
+}
+
+.footer-i {
+    width: 150px;
+    text-align: center;
+}
+
+.footer-text {
+    color: grey;
+    margin: auto;
+}
+
+.usr-name {
+    color: black;
+    font-size: 15px;
+}
+
+.usr-name:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.project-details > * {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 70%;
+}
+
+.time-content {
+    float: right;
+    width: 15%;
+    margin: 0% 7%;
+}
+
 #logo-menu {
     height: 100%;
     width: 75px;
 }
 
-.menu-text {
-    font-size: 13px;
+#criar-projeto {
+    margin-left: 75px;
 }
 
 #fullscreen-icon {
@@ -32,22 +72,7 @@ body {
     background-color: whitesmoke;
 }
 
-.grey-text {
-    color: grey;
-}
-
-.footer-i {
-    width: 150px;
-    text-align: center;
-}
-
-.footer-text {
-    color: grey;
-    margin: auto;
-}
-
 #project-list-search-grid {
-    /* border: 2px solid black; width: 100%; */
     height: 57px;
 }
 
@@ -56,38 +81,45 @@ body {
     font-size: 21px;
 }
 
-.usr-name {
-    color: black;
-    font-size: 15px;
-}
-
-.usr-name:hover {
-    color: black;
-    cursor: pointer;
-}
-
-.project-details > * {
-    display:inline-block;
-    vertical-align: top;
-    max-width:70%;
-
-    /* border: 2px solid black; */
-}
-
-.time-content {
-    float: right;
-    width: 15%;
-    margin: 0% 7%;
-}
-
 #time-left {
     margin-left: 7%;
     margin-right: 12%;
-    /* border: 2px solid black; */
 }
 
 #time-right {
     margin-left: 12%;
     color: tomato;
-    /* border: 2px solid black; */
+}
+
+#modal-criar-projeto {
+    max-width: 100%;
+    max-height: 100%;
+
+    width: 25%;
+    padding: 1%;
+}
+
+#txt-criar-projeto {
+    color: white;
+}
+
+#close-modal-icon {
+    float: right;
+}
+
+#close-modal-icon:hover {
+    cursor: pointer;
+}
+
+#accordion-criar-projeto {
+    margin: 4% 0%;
+}
+
+#lbl-radiobtn-criar-projeto {
+    margin-left: 5px;
+    margin-right: 50px;
+}
+
+#icon-tooltip {
+    display:inline-block; width: 17%;
 }
