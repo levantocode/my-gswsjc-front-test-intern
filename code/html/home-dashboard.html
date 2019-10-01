@@ -337,6 +337,99 @@
 
 
 
+    <div class="ui tiny modal" id="cliente-modal-criar-projeto">
+        <p style="font-size: 20px;">Criar projeto <i class="close icon" id="cliente-close-modal-icon"></i></p>
+
+        <form class="ui form">
+            <div class="field">
+                <input type="text" name="project-name" placeholder="Nome do projeto">
+            </div>
+
+            <div class="field">
+                <div class="ui selection dropdown">
+                    <span class="text grey-text">Selecione o cliente</span>
+
+                    <div class="menu">
+                        <div class="ui icon search input">
+                            <i class="search icon"></i>
+                            <input type="text" placeholder="Encontrar cliente">
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="scrolling menu">
+                            <div class="item">Caio</div>
+                            <div class="item">João</div>
+                            <div class="item">Maria</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inline fields">
+                <label>Projeto privado
+                    <div data-tooltip="Projeto público?" id="cliente-icon-tooltip">
+                        <i class="info circle icon" id="cliente-lbl-radiobtn-criar-projeto"></i>
+                    </div>
+                </label>
+
+                <div class="field">
+                    <div class="ui radio checkbox" style="margin-right: 15px;">
+                        <input type="radio" name="project-privacy">
+                        <label style="color:grey;">Sim</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" name="project-privacy" checked="checked">
+                        <label style="color:grey;">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item" id="cliente-accordion-criar-projeto">
+                <div class="ui active accordion">
+                    <a class="title item">
+                        <span style="font-weight: bold;">Adicionar usuários
+                            <i class="dropdown icon" style="float: right;"></i>
+                        </span>
+                    </a>
+
+                    <div class="active content" style="margin: 1% 0%;">
+                        <div class="ui list">
+                            <div class="item">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="client-name">
+                                    <label>Jonas</label>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="client-name">
+                                    <label>Gabriela</label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="client-name">
+                                    <label>Maria</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui fluid large submit teal button" id="cliente-btn-criar-projeto">
+                <a style="color: white;">Criar projeto</a>
+            </div>
+        </form>
+    </div>
+
+
+
     <div class="ui tiny modal" id="modal-criar-projeto">
         <p style="font-size: 20px;">Criar projeto <i class="close icon" id="close-modal-icon"></i></p>
 
@@ -388,6 +481,20 @@
                 </div>
             </div>
 
+            <div class="field" style="margin: 40px 35px;">
+                <div class="ui grid">
+                    <div class="ten wide column" id="criar-projeto-timer">
+                        <p class="grey-text" id="txt-tempo-total">Tempo Total</p>
+                        <p class="grey-text" id="txt-tempo">0:00</p>
+                    </div>
+                    <div class="two wide colum" id="criar-projeto-timer2">
+                        <span class="grey-text" style="line-height: 40px;">
+                            <i class="calendar alternate outline icon"></i>
+                            6 de Junho</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="item" id="accordion-criar-projeto">
                 <div class="ui active accordion">
                     <a class="title item">
@@ -423,7 +530,7 @@
             </div>
 
             <div class="ui fluid large submit teal button" id="btn-criar-projeto">
-                <a id="txt-criar-projeto">Criar projeto</a>
+                <a style="color: white;">Criar projeto</a>
             </div>
         </form>
     </div>
@@ -437,16 +544,30 @@
         $("#project").progress();
 
         $("#cliente-criar-projeto").on("click", () => {
-            $(".tiny.modal").modal("show")
+            $("#cliente-modal-criar-projeto").modal("show")
+        });
+
+        $("#cliente-close-modal-icon").on("click", () => {
+            $("#cliente-modal-criar-projeto").modal("hide")
+        });
+
+        $("#cliente-btn-criar-projeto").on("click", () => {
+            $("#cliente-modal-criar-projeto").modal("hide")
+        });
+
+
+        $("#criar-projeto").on("click", () => {
+            $("#modal-criar-projeto").modal("show")
         });
 
         $("#close-modal-icon").on("click", () => {
-            $(".tiny.modal").modal("hide")
+            $("#modal-criar-projeto").modal("hide")
         });
 
         $("#btn-criar-projeto").on("click", () => {
-            $(".tiny.modal").modal("hide")
+            $("#modal-criar-projeto").modal("hide")
         });
+
 
         $(".ui.sidebar").sidebar({
             context: $(".bottom.container")
@@ -458,4 +579,5 @@
         });     
     </script>
 </body>
+
 </html>
