@@ -43,12 +43,12 @@
             <p class="menu-text">Criar Projeto</p>
         </a>
 
-        <a class="item" style="margin-left: 75px;" id='cadastrar-usuario'>
+        <a class="item" style="margin-left: 75px;" id="cadastrar-usuario">
             <i class="user plus icon"></i>
             <p class="menu-text">Cadastrar Usuário</p>
         </a>
 
-        <a class="item" style="margin-left: 75px;">
+        <a class="item" style="margin-left: 75px;" id="menu-cadastrar-cliente">
             <i class="address card icon"></i>
             <p class="menu-text">Cadastrar Cliente</p>
         </a>
@@ -99,7 +99,7 @@
                 </a>
 
                 <div class="item">
-                    <div class="ui accordion">
+                    <div class="ui accordion" id="cadastros-accordion">
                         <a class="title item">
                             <p> <i class="wrench icon"></i> Cadastros <i class="dropdown icon"
                                     style="float: right;"></i>
@@ -201,8 +201,8 @@
                                 <i class="dropdown icon"></i>
 
                                 <div class="menu">
-                                    <div class="item">Teste 1</div>
-                                    <div class="item">Teste 2</div>
+                                    <div class="item">Projeto 1</div>
+                                    <div class="item">Projeto 2</div>
                                 </div>
                             </div>
                         </div>
@@ -247,6 +247,7 @@
 
                                     <div class="menu">
                                         <div class="item" id="ver-detalhes">Ver detalhes</div>
+                                        <div class="item" id="informar-horas-trabalhadas">Informar horas trabalhadas</div>
                                     </div>
                                 </div>
 
@@ -254,6 +255,53 @@
                                     <span id="time-left"> <i class="clock outline icon"></i> 8:00</span>
                                     <i class="ellipsis vertical icon"></i>
                                     <span id="time-right"> <i class="clock outline icon"></i> 10:00</span>
+                                </div>
+
+                            </div>
+
+                            <div id="detalhes-expansion">
+                                <div class="ui grid" id="details-grid">
+                                    <div class="row" style="margin-bottom: 5px;">
+                                        <div class="eleven wide column">
+                                            <span class="grey-text">Obs.</span>
+                                        </div>
+
+                                        <div class="two wide column grey-text details-right-side">
+                                            <span>Data</span>
+                                        </div>
+
+                                        <div class="two wide column grey-text details-right-side">
+                                            <span>Horas trabalhadas</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="eleven wide column">
+                                            <span>Criação de componentes da tela de login</span>
+                                        </div>
+
+                                        <div class="two wide column details-right-side">
+                                            <span>01/06/2019</span>
+                                        </div>
+
+                                        <div class="two wide column details-right-side">
+                                            <span style="font-weight: bold;">6 h</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="eleven wide column">
+                                            <span>Instalando e configurando ambiente do projeto</span>
+                                        </div>
+
+                                        <div class="two wide column details-right-side">
+                                            <span>03/06/2019</span>
+                                        </div>
+
+                                        <div class="two wide column details-right-side">
+                                            <span style="font-weight: bold;">2 h</span>
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -496,7 +544,7 @@
             </div>
 
             <div class="item" id="accordion-criar-projeto">
-                <div class="ui active accordion">
+                <div class="ui accordion">
                     <a class="title item">
                         <span style="font-weight: bold;">Adicionar usuários
                             <i class="dropdown icon" style="float: right;"></i>
@@ -578,7 +626,7 @@
             </div>
 
             <div class="i">
-                <p class='grey-text' style='margin-bottom: 15px;'>+ Atribuir projetos a este usuário</p>
+                <p class="grey-text" style="margin-bottom: 15px;">+ Atribuir projetos a este usuário</p>
             </div>
 
             <div class="ui fluid large submit teal button" id="btn-cadastrar-usuario">
@@ -595,53 +643,85 @@
         $(".ui.dropdown").dropdown();
         $("#project").progress();
 
-        $("#cliente-criar-projeto").on("click", () => {
-            $("#cliente-modal-criar-projeto").modal("show")
-        });
-
-        $("#cliente-close-modal-icon").on("click", () => {
-            $("#cliente-modal-criar-projeto").modal("hide")
-        });
-
-        $("#cliente-btn-criar-projeto").on("click", () => {
-            $("#cliente-modal-criar-projeto").modal("hide")
-        });
 
 
-        $("#criar-projeto").on("click", () => {
-            $("#modal-criar-projeto").modal("show")
-        });
+        $("#cliente-criar-projeto")
+            .on("click", () => {
+                $("#cliente-modal-criar-projeto").modal("show")
+            })
+        ;
 
-        $("#close-modal-icon").on("click", () => {
-            $("#modal-criar-projeto").modal("hide")
-        });
+        $("#cliente-close-modal-icon")
+            .on("click", () => {
+                $("#cliente-modal-criar-projeto").modal("hide")
+            })
+        ;
 
-        $("#btn-criar-projeto").on("click", () => {
-            $("#modal-criar-projeto").modal("hide")
-        });
-
-
-        $("#cadastrar-usuario").on("click", () => {
-            $("#modal-cadastrar-usuario").modal("show")
-        });
-
-        $("#cadastrar-usuario-close-modal-icon").on("click", () => {
-            $("#modal-cadastrar-usuario").modal("hide")
-        });
-
-        $("#btn-cadastrar-usuario").on("click", () => {
-            $("#modal-cadastrar-usuario").modal("hide")
-        });
+        $("#cliente-btn-criar-projeto")
+            .on("click", () => {
+                $("#cliente-modal-criar-projeto").modal("hide")
+            })
+        ;
 
 
-        $(".ui.sidebar").sidebar({
-            context: $(".bottom.container")
-        }).sidebar("attach events", ".menu .openbtn")
-            .sidebar("setting", "dimPage", false);
 
-        $("#ver-detalhes").on("click", () => {
-            console.log("foi")
-        });     
+        $("#criar-projeto")
+            .on("click", () => {
+                $("#modal-criar-projeto").modal("show")
+            })
+        ;
+
+        $("#close-modal-icon")
+            .on("click", () => {
+                $("#modal-criar-projeto").modal("hide")
+            })
+        ;
+
+        $("#btn-criar-projeto")
+            .on("click", () => {
+                $("#modal-criar-projeto").modal("hide")
+            })
+        ;
+
+        $("#cadastrar-usuario")
+            .on("click", () => {
+                $("#modal-cadastrar-usuario").modal("show")
+            })
+        ;
+
+        $("#cadastrar-usuario-close-modal-icon")
+            .on("click", () => {
+                $("#modal-cadastrar-usuario").modal("hide")
+            })
+        ;
+
+        $("#btn-cadastrar-usuario")
+            .on("click", () => {
+                $("#modal-cadastrar-usuario").modal("hide")
+            })
+        ;
+
+
+
+        $(".ui.sidebar")
+            .sidebar({
+                context: $(".bottom.container")
+            })
+            .sidebar("attach events", ".menu .openbtn")
+            .sidebar("setting", "dimPage", false)
+        ;
+
+        $("#ver-detalhes")
+            .on("click", () => {
+                if ( $("#detalhes-expansion").css("display") == "none") {
+                    $("#detalhes-expansion").css("display", "block");
+                }
+                else {
+                    $("#detalhes-expansion").css("display", "none");
+                }
+            })
+        ;
+
     </script>
 </body>
 
