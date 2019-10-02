@@ -43,7 +43,7 @@
             <p class="menu-text">Criar Projeto</p>
         </a>
 
-        <a class="item" style="margin-left: 75px;">
+        <a class="item" style="margin-left: 75px;" id='cadastrar-usuario'>
             <i class="user plus icon"></i>
             <p class="menu-text">Cadastrar Usuário</p>
         </a>
@@ -537,6 +537,58 @@
 
 
 
+    <div class="ui tiny modal" id="modal-cadastrar-usuario">
+        <p style="font-size: 20px;">Cadastrar usuários <i class="close icon"
+                id="cadastrar-usuario-close-modal-icon"></i></p>
+
+        <form class="ui form">
+            <div class="field">
+                <label>Nome do usuário</label>
+                <input type="text" name="user-name" placeholder="Nome do usuário">
+            </div>
+
+            <div class="field">
+                <input type="text" name="user-cpf" placeholder="CPF">
+            </div>
+
+            <div class="field">
+                <input type="text" name="user-email" placeholder="Digite o e-mail (Será o login de acesso)">
+            </div>
+
+            <div class="inline fields">
+                <label>Permissão
+                    <div data-tooltip="Escolha o tipo do usuário" id="cadastrar-usuario-icon-tooltip">
+                        <i class="info circle icon" id="lbl-radiobtn-cadastrar-usuario"></i>
+                    </div>
+                </label>
+
+                <div class="field">
+                    <div class="ui radio checkbox" style="margin-right: 15px;">
+                        <input type="radio" name="user-permission">
+                        <label style="color:grey;">Administrador</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" name="user-permission" checked="checked">
+                        <label style="color:grey;">Usuário</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="i">
+                <p class='grey-text' style='margin-bottom: 15px;'>+ Atribuir projetos a este usuário</p>
+            </div>
+
+            <div class="ui fluid large submit teal button" id="btn-cadastrar-usuario">
+                <a style="color: white;">Cadastrar usuário</a>
+            </div>
+        </form>
+    </div>
+
+
+
     <script>
         $(".ui.accordion").accordion();
         $(".ui.checkbox").checkbox();
@@ -566,6 +618,19 @@
 
         $("#btn-criar-projeto").on("click", () => {
             $("#modal-criar-projeto").modal("hide")
+        });
+
+
+        $("#cadastrar-usuario").on("click", () => {
+            $("#modal-cadastrar-usuario").modal("show")
+        });
+
+        $("#cadastrar-usuario-close-modal-icon").on("click", () => {
+            $("#modal-cadastrar-usuario").modal("hide")
+        });
+
+        $("#btn-cadastrar-usuario").on("click", () => {
+            $("#modal-cadastrar-usuario").modal("hide")
         });
 
 
