@@ -8,12 +8,22 @@
 
     <title>Home/Dashboard</title>
 
+    
     <!-- Semantic UI-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/home-dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../css/listagem-projetos.css">
+    <link rel="stylesheet" type="text/css" href="../css/home-dashboard-header.css">
+    <link rel="stylesheet" type="text/css" href="../css/home-dashboard-footer.css">
+
+    <link rel="stylesheet" type="text/css" href="../css/adm-modal-criar-projeto.css">
+    <link rel="stylesheet" type="text/css" href="../css/cli-modal-criar-projeto.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal-cadastrar-usuario.css">
+
+    
 </head>
 
 <body>
@@ -193,7 +203,7 @@
                 <div class="ui segment" style="padding: 1.5%;">
                     <p id="title-listagem-text">Listagem de projetos</p>
 
-                    <div class="ui grid" id="project-list-search-grid">
+                    <div class="ui grid" style='height: 57px;'>
                         <div class="eight wide column">
                             <div class="ui scrolling dropdown" style="border-bottom: 1px solid lightgrey;">
                                 <div class="text">
@@ -367,15 +377,15 @@
                 </div>
 
                 <div class="right menu" style="margin-right: 271px;">
-                    <a class="item footer-i">
+                    <a class="item footer-item">
                         <p class="footer-text">Dashboard</p>
                     </a>
 
-                    <a class="item footer-i">
+                    <a class="item footer-item">
                         <p class="footer-text">Alterar plano</p>
                     </a>
 
-                    <a class="item footer-i">
+                    <a class="item footer-item">
                         <p class="footer-text">Ajuda & Suporte</p>
                     </a>
                 </div>
@@ -637,92 +647,10 @@
 
 
 
-    <script>
-        $(".ui.accordion").accordion();
-        $(".ui.checkbox").checkbox();
-        $(".ui.dropdown").dropdown();
-        $("#project").progress();
-
-
-
-        $("#cliente-criar-projeto")
-            .on("click", () => {
-                $("#cliente-modal-criar-projeto").modal("show")
-            })
-        ;
-
-        $("#cliente-close-modal-icon")
-            .on("click", () => {
-                $("#cliente-modal-criar-projeto").modal("hide")
-            })
-        ;
-
-        $("#cliente-btn-criar-projeto")
-            .on("click", () => {
-                $("#cliente-modal-criar-projeto").modal("hide")
-            })
-        ;
-
-
-
-        $("#criar-projeto")
-            .on("click", () => {
-                $("#modal-criar-projeto").modal("show")
-            })
-        ;
-
-        $("#close-modal-icon")
-            .on("click", () => {
-                $("#modal-criar-projeto").modal("hide")
-            })
-        ;
-
-        $("#btn-criar-projeto")
-            .on("click", () => {
-                $("#modal-criar-projeto").modal("hide")
-            })
-        ;
-
-        $("#cadastrar-usuario")
-            .on("click", () => {
-                $("#modal-cadastrar-usuario").modal("show")
-            })
-        ;
-
-        $("#cadastrar-usuario-close-modal-icon")
-            .on("click", () => {
-                $("#modal-cadastrar-usuario").modal("hide")
-            })
-        ;
-
-        $("#btn-cadastrar-usuario")
-            .on("click", () => {
-                $("#modal-cadastrar-usuario").modal("hide")
-            })
-        ;
-
-
-
-        $(".ui.sidebar")
-            .sidebar({
-                context: $(".bottom.container")
-            })
-            .sidebar("attach events", ".menu .openbtn")
-            .sidebar("setting", "dimPage", false)
-        ;
-
-        $("#ver-detalhes")
-            .on("click", () => {
-                if ( $("#detalhes-expansion").css("display") == "none") {
-                    $("#detalhes-expansion").css("display", "block");
-                }
-                else {
-                    $("#detalhes-expansion").css("display", "none");
-                }
-            })
-        ;
-
-    </script>
+    <script type='text/javascript' src='../js/sidebar.js'></script>
+    <script type='text/javascript' src='../js/home-dashboard.js'></script>
+    <script type='text/javascript' src='../js/modal-criar-projeto.js'></script>
+    <script type='text/javascript' src='../js/cli-modal-criar-projeto.js'></script>
 </body>
 
 </html>
