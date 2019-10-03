@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="../css/cli-modal-criar-projeto.css">
     <link rel="stylesheet" type="text/css" href="../css/modal-cadastrar-usuario.css">
 
+    <link rel="stylesheet" type="text/css" href="../css/aviso-horas-trabalhadas.css">
+
     
 </head>
 
@@ -643,6 +645,25 @@
                 <a style="color: white;">Cadastrar usuário</a>
             </div>
         </form>
+
+
+
+        <div class="ui tiny modal" id='aviso-horas-trabalhadas' style='text-align: center;'>
+            <div class="ui container" style='height: 170px;'>
+                <img src='../../resources/images/yellow-alert.png' style='height: 170px;'>
+            </div>
+    
+            <p id='aviso-txt'>Aviso!</p>
+
+            <p id='aviso-message' style='margin-bottom: 10px;'>Você tem certeza que deseja registrar a quantidade de horas para o projeto 
+                <span style='font-weight: bold;'>Tanby Papelaria?</span>
+            </p>
+
+            <div class="container" id='aviso-buttons'>
+                <div class="ui big grey button" id='btn-aviso-cancelar'>Cancelar</div>
+                <div class="ui big teal button" id='btn-aviso-aceitar'>Sim, registrar!</div>
+            </div>
+        </div>
     </div>
 
 
@@ -651,6 +672,7 @@
     <script type='text/javascript' src='../js/home-dashboard.js'></script>
     <script type='text/javascript' src='../js/modal-criar-projeto.js'></script>
     <script type='text/javascript' src='../js/cli-modal-criar-projeto.js'></script>
+    <script type='text/javascript' src='../js/modal-horas-trabalhadas.js'></script>
 </body>
 
 </html>

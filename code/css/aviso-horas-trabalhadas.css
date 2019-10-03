@@ -1,0 +1,23 @@
+#aviso-horas-trabalhadas {
+    width: 25%;
+    padding: 1%;
+}
+
+#aviso-buttons {
+    float: right;
+    margin-top: 20px;
+}
+
+#aviso-txt {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#aviso-message {
+    font-size: 16px;
+    color: grey;
+}
+
+#btn-aviso-aceitar {
+    margin-right: 0;
+}
