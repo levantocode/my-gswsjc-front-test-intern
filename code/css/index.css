@@ -1,20 +1,19 @@
- .login-background-image {
+ body {
     background-image: url('../../resources/images/background-main.png');
     background-repeat: no-repeat;
     background-size: 100%;
-
-    position: absolute;
-    left: 12%;
-
-    width: 75%;
-    height: 75%;
-
+    overflow: hidden;
 }
 
 #login-segment {
-    padding-bottom: 35px;
-    margin: 15% auto;
+    padding-bottom: 30px;
+    margin: 20% auto;
     width: 29%;
+}
+
+#logo-login {
+    margin: auto;
+    border-radius: 30px;
 }
 
 #form-header {
