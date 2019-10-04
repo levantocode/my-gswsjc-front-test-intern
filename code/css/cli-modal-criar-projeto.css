@@ -1,4 +1,4 @@
-#cliente-modal-criar-projeto {
+#cli-modal-criar-projeto {
     max-width: 100%;
     max-height: 100%;
 
@@ -6,24 +6,24 @@
     padding: 1%;
 }
 
-#cliente-close-modal-icon {
+#cli-close-modal-icon {
     float: right;
 }
 
-#cliente-close-modal-icon:hover {
+#cli-close-modal-icon:hover {
     cursor: pointer;
 }
 
-#cliente-accordion-criar-projeto {
+#cli-accordion-criar-projeto {
     margin: 4% 0%;
 }
 
-#cliente-lbl-radiobtn-criar-projeto {
+#cli-lbl-radiobtn-criar-projeto {
     margin-left: 5px;
     margin-right: 50px;
 }
 
-#cliente-icon-tooltip {
+#cli-icon-tooltip {
     display:inline-block;
     width: 17%;
 }

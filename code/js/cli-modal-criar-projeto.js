@@ -1,17 +1,20 @@
-$("#cliente-criar-projeto")
+$(".ui.checkbox").checkbox();
+$(".ui.dropdown").dropdown();
+
+$("#cli-criar-projeto")
     .on("click", () => {
-        $("#cliente-modal-criar-projeto").modal("show")
+        $("#cli-modal-criar-projeto").modal("show")
     })
 ;
 
-$("#cliente-close-modal-icon")
+$("#cli-close-modal-icon")
     .on("click", () => {
-        $("#cliente-modal-criar-projeto").modal("hide")
+        $("#cli-modal-criar-projeto").modal("hide")
     })
 ;
 
-$("#cliente-btn-criar-projeto")
+$("#cli-btn-criar-projeto")
     .on("click", () => {
-        $("#cliente-modal-criar-projeto").modal("hide")
+        $("#cli-modal-criar-projeto").modal("hide")
     })
 ;

@@ -1,18 +1,18 @@
-$('#informar-horas-trabalhadas')
-    .on('click', () => {
-        $('#aviso-horas-trabalhadas').modal('show')
+$("#informar-horas-trabalhadas")
+    .on("click", () => {
+        $("#aviso-horas-trabalhadas").modal("show")
     })
 ;
 
-$('#btn-aviso-cancelar')
-    .on('click', () => {
-        $('#aviso-horas-trabalhadas').modal('hide')
+$("#btn-aviso-cancelar")
+    .on("click", () => {
+        $("#aviso-horas-trabalhadas").modal("hide")
     })
 ;
 
-$('#btn-aviso-aceitar')
-    .on('click', () => {
+$("#btn-aviso-aceitar")
+    .on("click", () => {
 
-        $('#aviso-horas-trabalhadas').modal('hide')
+        $("#aviso-horas-trabalhadas").modal("hide")
     })
 ;
