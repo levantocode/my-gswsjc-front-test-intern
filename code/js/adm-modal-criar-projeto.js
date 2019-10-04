@@ -1,4 +1,6 @@
 $(".ui.checkbox").checkbox();
+$(".ui.dropdown").dropdown();
+
 
 $("#criar-projeto")
     .on("click", () => {

@@ -8,9 +8,6 @@
 
 #adm-close-modal-icon {
     float: right;
-}
-
-#adm-close-modal-icon:hover {
     cursor: pointer;
 }
 

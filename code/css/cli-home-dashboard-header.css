@@ -1,0 +1,23 @@
+.menu-text {
+    font-size: 13px;
+}
+
+#logo-menu {
+    height: 100%;
+    width: 75px;
+}
+
+#fullscreen-icon {
+    margin-right: 20px;
+    margin-left: 5px;
+    
+    cursor: pointer;
+}
+
+#end-of-registers-txt {
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    text-align:center;
+    font-size: 18px;
+}
