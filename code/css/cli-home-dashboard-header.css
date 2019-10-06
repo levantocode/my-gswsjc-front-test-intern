@@ -21,3 +21,15 @@
     text-align:center;
     font-size: 18px;
 }
+
+
+#mid-column-left {
+    display: inline-block;
+    width: 78%;
+    float: left;
+}
+
+#mid-column-right {
+    display:inline-block;
+    float: right;
+}

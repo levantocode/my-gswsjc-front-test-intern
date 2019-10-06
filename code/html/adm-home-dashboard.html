@@ -23,57 +23,58 @@
     <link rel="stylesheet" type="text/css" href="../css/adm-modal-cadastrar-usuario.css">
 
     <link rel="stylesheet" type="text/css" href="../css/aviso-horas-trabalhadas.css">
+    <link rel="stylesheet" type="text/css" href="../css/modal-informar-horas-trabalhadas.css">
 </head>
 
 <body>
     <div class="ui top attached borderless menu" style="height: 8%;">
-            <div class="header item">
-                <img class="ui small image" src="../../resources/images/p-logo.png" id="logo-menu">
-            </div>
-        
-            <a class="item openbtn" style="margin-left: 110px;">
-                <i class="icon content"></i>
-            </a>
-        
-            <div class="header item">
-                <div class="ui category search item">
-                    <div class="ui icon input">
-                        <input class="prompt" type="text" placeholder="Buscar...">
-                        <i class="search link icon"></i>
-                    </div>
-        
-                    <div class="results"></div>
+        <div class="header item">
+            <img class="ui small image" src="../../resources/images/p-logo.png" id="logo-menu">
+        </div>
+
+        <a class="item openbtn" style="margin-left: 110px;">
+            <i class="icon content"></i>
+        </a>
+
+        <div class="header item">
+            <div class="ui category search item">
+                <div class="ui icon input">
+                    <input class="prompt" type="text" placeholder="Buscar...">
+                    <i class="search link icon"></i>
                 </div>
-            </div>
-        
-            <a class="item" id="criar-projeto">
-                <i class="plus icon"></i>
-                <p class="menu-text">Criar Projeto</p>
-            </a>
-        
-            <a class="item" style="margin-left: 75px;" id="cadastrar-usuario">
-                <i class="user plus icon"></i>
-                <p class="menu-text">Cadastrar Usuário</p>
-            </a>
-        
-            <a class="item" style="margin-left: 75px;" id="menu-cadastrar-cliente">
-                <i class="address card icon"></i>
-                <p class="menu-text">Cadastrar Cliente</p>
-            </a>
-        
-            <div class="right menu">
-                <div class="header fitted item" style='cursor: pointer;'>
-                    <img src="../../resources/images/config-menu.png">
-                </div>
-        
-                <div class="header fitted item">
-                    <img src="../../resources/images/fullscreen-menu.png" id="fullscreen-icon">
-                </div>
+
+                <div class="results"></div>
             </div>
         </div>
-        
-        
-        
+
+        <a class="item" id="criar-projeto">
+            <i class="plus icon"></i>
+            <p class="menu-text">Criar Projeto</p>
+        </a>
+
+        <a class="item" style="margin-left: 75px;" id="cadastrar-usuario">
+            <i class="user plus icon"></i>
+            <p class="menu-text">Cadastrar Usuário</p>
+        </a>
+
+        <a class="item" style="margin-left: 75px;" id="menu-cadastrar-cliente">
+            <i class="address card icon"></i>
+            <p class="menu-text">Cadastrar Cliente</p>
+        </a>
+
+        <div class="right menu">
+            <div class="header fitted item" style="cursor: pointer;">
+                <img src="../../resources/images/config-menu.png">
+            </div>
+
+            <div class="header fitted item">
+                <img src="../../resources/images/fullscreen-menu.png" id="fullscreen-icon">
+            </div>
+        </div>
+    </div>
+
+
+
 
     <div class="ui bottom attached fluid container" style="max-height:92%;">
         <div class="ui left push vertical menu visible sidebar" style="width: 271px;">
@@ -127,7 +128,7 @@
                         </a>
 
                         <div class="content">
-                            <a class="item" id="cli-criar-projeto">Criar projeto</a>
+                            <a class="item" id="sidebar-criar-projeto">Criar projeto</a>
                             <a class="item">Relatórios</a>
                             <a class="item">Registros</a>
                         </div>
@@ -168,7 +169,7 @@
                 </div>
 
                 <a class="item">
-                    <p style='margin-top: 10px;'> <i class="sign out icon"></i> Sair do sistema</p>
+                    <p style="margin-top: 10px;"> <i class="sign out icon"></i> Sair do sistema</p>
                 </a>
             </div>
         </div>
@@ -195,176 +196,180 @@
                     </div>
                 </div>
 
-                <div class="ui segment" style="padding: 1.5%;">
-                    <p id="title-listagem-text">Listagem de projetos</p>
+                        <div class="ui segment" style="padding: 1.5%;">
+                            <p id="title-listagem-text">Listagem de projetos</p>
 
-                    <div class="ui grid" style="height: 57px;">
-                        <div class="eight wide column">
-                            <div class="ui scrolling dropdown" style="border-bottom: 1px solid lightgrey;">
-                                <div class="text">
-                                    <i class="filter icon"></i>Todos os registros no projeto</div>
-                                <i class="dropdown icon"></i>
+                            <div class="ui grid" style="height: 57px;">
+                                <div class="eight wide column">
+                                    <div class="ui scrolling dropdown" style="border-bottom: 1px solid lightgrey;">
+                                        <div class="text">
+                                            <i class="filter icon"></i>Todos os registros no projeto</div>
+                                        <i class="dropdown icon"></i>
 
-                                <div class="menu">
-                                    <div class="item">Projeto 1</div>
-                                    <div class="item">Projeto 2</div>
+                                        <div class="menu">
+                                            <div class="item">Projeto 1</div>
+                                            <div class="item">Projeto 2</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="two wide right floated column" style="margin-left:20%;">
+                                    <div class="item" style="text-align: right;">
+                                        <p class="grey-text">Horas lançadas</p>
+                                    </div>
+                                </div>
+
+                                <div class="two wide right floated column" style="margin-right:5%; padding-left: 1.5%;">
+                                    <div class="item">
+                                        <p class="grey-text">Horas faltantes</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="two wide right floated column" style="margin-left:20%;">
-                            <div class="item" style="text-align: right;">
-                                <p class="grey-text">Horas lançadas</p>
-                            </div>
-                        </div>
+                            <div class="ui list list-projects">
+                                <div class="ui segment">
+                                    <div class="item project-details">
+                                        <a class="ui tiny image">
+                                            <img src="../../resources/images/a-letter.png">
+                                        </a>
 
-                        <div class="two wide right floated column" style="margin-right:5%; padding-left: 1.5%;">
-                            <div class="item">
-                                <p class="grey-text">Horas faltantes</p>
+                                        <div class="vertical content project-user-info" style="margin-left: 0.5%;">
+                                            <div class="summary">
+                                                <a class="user usr-name">Tanby Papelaria </a>
+                                                <i class="caret right icon"></i> Desenvolvimento
+
+                                                <div class="date grey-text">
+                                                    Sistema para gestão de estoque
+                                                </div>
+                                            </div>
+
+                                            <div class="meta" style="margin-top: 10px;">
+                                                <i class="calendar alternate outline icon"></i> Termina em 6 de Julho
+                                            </div>
+                                        </div>
+
+                                        <div class="ui compact pointing top right dropdown" style="float: right;">
+                                            <i class="ellipsis horizontal icon"></i>
+
+                                            <div class="menu">
+                                                <div class="item" id="ver-detalhes">Ver detalhes</div>
+                                                <div class="item" id="informar-horas-trabalhadas">Informar horas
+                                                    trabalhadas
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content time-content">
+                                            <span id="time-left"> <i class="clock outline icon"></i> 8:00</span>
+                                            <i class="ellipsis vertical icon"></i>
+                                            <span id="time-right"> <i class="clock outline icon"></i> 10:00</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="detalhes-expansion">
+                                        <div class="ui grid" id="details-grid">
+                                            <div class="row" style="margin-bottom: 5px;">
+                                                <div class="eleven wide column">
+                                                    <span class="grey-text">Obs.</span>
+                                                </div>
+
+                                                <div class="two wide column grey-text details-right-side">
+                                                    <span>Data</span>
+                                                </div>
+
+                                                <div class="two wide column grey-text details-right-side">
+                                                    <span>Horas trabalhadas</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="eleven wide column">
+                                                    <span>Criação de componentes da tela de login</span>
+                                                </div>
+
+                                                <div class="two wide column details-right-side">
+                                                    <span>01/06/2019</span>
+                                                </div>
+
+                                                <div class="two wide column details-right-side">
+                                                    <span style="font-weight: bold;">6 h</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="eleven wide column">
+                                                    <span>Instalando e configurando ambiente do projeto</span>
+                                                </div>
+
+                                                <div class="two wide column details-right-side">
+                                                    <span>03/06/2019</span>
+                                                </div>
+
+                                                <div class="two wide column details-right-side">
+                                                    <span style="font-weight: bold;">2 h</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="ui bottom attached green progress" data-value="90" data-total="100"
+                                        id="project">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
+
+                                <div class="ui segment">
+                                    <div class="item project-details">
+                                        <a class="ui tiny image">
+                                            <img src="../../resources/images/l-letter.png">
+                                        </a>
+
+                                        <div class="content project-user-info" style="margin-left: 0.5%;">
+                                            <div class="summary">
+                                                <a class="user usr-name">Embraer </a>
+                                                <i class="caret right icon"></i> Manutenção
+
+                                                <div class="date grey-text">
+                                                    Sistema para gestão de estoque
+                                                </div>
+                                            </div>
+
+                                            <div class="meta" style="margin-top: 10px;">
+                                                <i class="calendar alternate outline icon"></i> Termina em 6 de Julho
+                                            </div>
+                                        </div>
+
+                                        <div class="ui compact pointing top right dropdown" style="float: right;">
+                                            <i class="ellipsis horizontal icon"></i>
+
+                                            <div class="menu">
+                                                <div class="item">Ver detalhes</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="content time-content">
+                                            <span id="time-left"> <i class="clock outline icon"></i> 8:00</span>
+                                            <i class="ellipsis vertical icon"></i>
+                                            <span id="time-right"> <i class="clock outline icon"></i> 12:00</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="ui bottom attached green progress" data-value="80" data-total="100"
+                                        id="project">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="ui list list-projects">
-                        <div class="ui segment">
-                            <div class="item project-details">
-                                <a class="ui tiny image">
-                                    <img src="../../resources/images/a-letter.png">
-                                </a>
-
-                                <div class="vertical content project-user-info" style="margin-left: 0.5%;">
-                                    <div class="summary">
-                                        <a class="user usr-name">Tanby Papelaria </a>
-                                        <i class="caret right icon"></i> Desenvolvimento
-
-                                        <div class="date grey-text">
-                                            Sistema para gestão de estoque
-                                        </div>
-                                    </div>
-
-                                    <div class="meta" style="margin-top: 10px;">
-                                        <i class="calendar alternate outline icon"></i> Termina em 6 de Julho
-                                    </div>
-                                </div>
-
-                                <div class="ui compact pointing top right dropdown" style="float: right;">
-                                    <i class="ellipsis horizontal icon"></i>
-
-                                    <div class="menu">
-                                        <div class="item" id="ver-detalhes">Ver detalhes</div>
-                                        <div class="item" id="informar-horas-trabalhadas">Informar horas trabalhadas
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="content time-content">
-                                    <span id="time-left"> <i class="clock outline icon"></i> 8:00</span>
-                                    <i class="ellipsis vertical icon"></i>
-                                    <span id="time-right"> <i class="clock outline icon"></i> 10:00</span>
-                                </div>
-
-                            </div>
-
-                            <div id="detalhes-expansion">
-                                <div class="ui grid" id="details-grid">
-                                    <div class="row" style="margin-bottom: 5px;">
-                                        <div class="eleven wide column">
-                                            <span class="grey-text">Obs.</span>
-                                        </div>
-
-                                        <div class="two wide column grey-text details-right-side">
-                                            <span>Data</span>
-                                        </div>
-
-                                        <div class="two wide column grey-text details-right-side">
-                                            <span>Horas trabalhadas</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="eleven wide column">
-                                            <span>Criação de componentes da tela de login</span>
-                                        </div>
-
-                                        <div class="two wide column details-right-side">
-                                            <span>01/06/2019</span>
-                                        </div>
-
-                                        <div class="two wide column details-right-side">
-                                            <span style="font-weight: bold;">6 h</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="eleven wide column">
-                                            <span>Instalando e configurando ambiente do projeto</span>
-                                        </div>
-
-                                        <div class="two wide column details-right-side">
-                                            <span>03/06/2019</span>
-                                        </div>
-
-                                        <div class="two wide column details-right-side">
-                                            <span style="font-weight: bold;">2 h</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="ui bottom attached green progress" data-value="90" data-total="100"
-                                id="project">
-                                <div class="bar"></div>
-                            </div>
-                        </div>
-
-                        <div class="ui segment">
-                            <div class="item project-details">
-                                <a class="ui tiny image">
-                                    <img src="../../resources/images/l-letter.png">
-                                </a>
-
-                                <div class="content project-user-info" style="margin-left: 0.5%;">
-                                    <div class="summary">
-                                        <a class="user usr-name">Embraer </a>
-                                        <i class="caret right icon"></i> Manutenção
-
-                                        <div class="date grey-text">
-                                            Sistema para gestão de estoque
-                                        </div>
-                                    </div>
-
-                                    <div class="meta" style="margin-top: 10px;">
-                                        <i class="calendar alternate outline icon"></i> Termina em 6 de Julho
-                                    </div>
-                                </div>
-
-                                <div class="ui compact pointing top right dropdown" style="float: right;">
-                                    <i class="ellipsis horizontal icon"></i>
-
-                                    <div class="menu">
-                                        <div class="item">Ver detalhes</div>
-                                    </div>
-                                </div>
-
-                                <div class="content time-content">
-                                    <span id="time-left"> <i class="clock outline icon"></i> 8:00</span>
-                                    <i class="ellipsis vertical icon"></i>
-                                    <span id="time-right"> <i class="clock outline icon"></i> 12:00</span>
-                                </div>
-
-                            </div>
-
-                            <div class="ui bottom attached green progress" data-value="80" data-total="100"
-                                id="project">
-                                <div class="bar"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
 
-            <div id='load-footer'></div>
+            <div id="load-footer"></div>
         </div>
     </div>
 
@@ -375,6 +380,7 @@
     <div id="load-adm-modal-cadastrar-usuario"></div>
 
     <div id="load-aviso-horas-trabalhadas"></div>
+    <div id="load-modal-informar-horas-trabalhadas"></div>
 
 
 

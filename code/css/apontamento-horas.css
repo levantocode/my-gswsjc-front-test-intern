@@ -1,0 +1,50 @@
+#apontamento-horas {
+    display: inline-block;
+    padding: 5%;
+}
+
+#apontamento-horas-header {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    clear: both;
+    float: left;
+}
+
+#apontamento-txt {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+#grid-apontamento-horas {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+
+    clear: both;
+    float: left;
+}
+
+#grid-apontamento-horas > .row {
+    color: grey;
+    width: 20px;
+}
+
+#grid-apontamento-horas > .week-day {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+    text-align: center;
+    font-weight: bold;
+}
+
+#ver-relatorio-txt {
+    display: inline-block;
+    text-align: center;
+
+    cursor: pointer;
+
+    clear: both;
+    float: left;
+}

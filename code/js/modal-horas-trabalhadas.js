@@ -13,6 +13,10 @@ $("#btn-aviso-cancelar")
 $("#btn-aviso-aceitar")
     .on("click", () => {
 
-        $("#aviso-horas-trabalhadas").modal("hide")
+        setTimeout(() => {
+            $("#aviso-horas-trabalhadas").modal("hide")
+        }, 1000)
+        
+        $("#modal-informar-horas-trabalhadas").modal("show")
     })
 ;

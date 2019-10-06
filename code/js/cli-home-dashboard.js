@@ -39,14 +39,5 @@ $(document).ready((e) => {
         $("#load-modal-informar-horas-trabalhadas")
             .load("../html/modal-informar-horas-trabalhadas.html")
         ;
-
-
-        $("#load-adm-modal-criar-projeto")
-            .load("../html/adm-modal-criar-projeto.html")
-        ;
-
-        $("#load-adm-modal-cadastrar-usuario")
-            .load("../html/adm-modal-cadastrar-usuario.html")
-        ;
     })
 ;
