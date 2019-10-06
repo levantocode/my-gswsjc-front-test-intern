@@ -1,5 +1,3 @@
-import { data_accounts } from "./data-accounts.js";
-
 $(".ui.checkbox").checkbox();
 
 
