@@ -1,41 +1,65 @@
-import { data_accounts } from './data-accounts.js';
+import { data_accounts } from "./data-accounts.js";
 
 $(".ui.checkbox").checkbox();
 
 
-$('.ui.form')
+$(".ui.form")
     .form({
         fields: {
             username: {
-                identifier: 'username',
+                identifier: "username",
                 rules: [
                     {
-                        type: 'empty',
+                        type: "empty",
                     }
                 ]
             },
             password: {
-                identifier: 'password',
+                identifier: "password",
                 rules: [
                     {
-                        type: 'empty',
+                        type: "empty",
                     },
                 ]
             }
         },
 
         onSuccess: (event) => {
-            if ($('#username').val() == data_accounts.admin.username &&
-                $('#password').val() == data_accounts.admin.password) {
-                    window.location = 'adm-home-dashboard.html';
-            }
+            $.ajax({
+                url: "https://5d99381a61c84c00147d7433.mockapi.io/gsw-test/accounts",
+                type: "GET",
+                dataType: "json",
 
-            else if ($('#username').val() == data_accounts.acc1.username &&
-                    $('#password').val() == data_accounts.acc1.password) {
-                        window.location = 'cli-home-dashboard.html';
-            }
+                success: (data) => {
+                    var username = $("#username").val();
+                    var password = $("#password").val();
 
-            // event.preventDefault();
+                    // Data[0] -> ADMIN
+                    //  id: '1',
+                    //  password: 37,
+                    //  username: 'username 1'
+                    
+                    // Data[1] -> Cliente
+                    //  id: '2',
+                    //  password: 50,
+                    //  username: 'username 2'
+
+                    if (username == data[0].username && password == data[0].password) {
+                        window.location = "adm-home-dashboard.html";
+                    }
+
+                    else {
+                        $.each(data, (index, value, usr=username, psw=password) => {
+                            if (usr == value.username && psw == value.password) {
+                                window.location = "cli-home-dashboard.html";
+                            }
+                        })
+                        ;
+                    }
+                }
+            })
+            ;
+
             return false;
         }
     })
