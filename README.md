@@ -4,8 +4,8 @@ Este repositório representa meu trabalho na aplicação do teste para estágio 
 ## Instruções
 A pagina inicial se encontra no arquivo 'index.html' onde é feito o login do usuário ou admin.
 
-Os dados das contas para login foram gerados utilizando Mock API ( https://www.mockapi.io )
-Eles são acessados através do link https://5d99381a61c84c00147d7433.mockapi.io/gsw-test/accounts
+Os dados das contas para login foram gerados utilizando Mock API ( https://www.mockapi.io ).
+Estes são acessados através do link https://5d99381a61c84c00147d7433.mockapi.io/gsw-test/accounts
 
 O primeiro usuário foi definido no código como admin, e os demais como cliente.
 
